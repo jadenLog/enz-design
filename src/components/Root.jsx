@@ -1,8 +1,12 @@
 import React from 'react';
 
+import Modal from './organisms/Modal';
+
 function Root() {
     return (
-        <div>Hello world</div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Modal />
+        </div>
     );
 }
 

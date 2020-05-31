@@ -48,8 +48,23 @@
             "react/jsx-indent": "off",
             "react/jsx-indent-props": "off",
             "react/require-default-props": "off",
-            "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-            "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.stories.js"]}]
+            "react/jsx-filename-extension": [
+                1,
+                {
+                    "extensions": [
+                        ".js",
+                        ".jsx"
+                    ]
+                }
+            ],
+            "import/no-extraneous-dependencies": [
+                "error",
+                {
+                    "devDependencies": [
+                        "**/*.stories.js"
+                    ]
+                }
+            ]
         },
         "env": {
             "browser": true,
@@ -70,6 +85,8 @@
         "@babel/polyfill": "^7.6.0",
         "@babel/preset-env": "^7.6.3",
         "@babel/preset-react": "^7.6.3",
+        "@storybook/addon-viewport": "^5.3.19",
+        "@storybook/addons": "^5.3.19",
         "@storybook/react": "^5.3.19",
         "babel-eslint": "^10.0.3",
         "babel-loader": "^8.0.6",
