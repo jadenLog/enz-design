@@ -1,38 +1,7 @@
-# React boilderplate (styled-components + eslint + prettier)
+## 로컬 npm server를 통해 enz-design install
 
-before start any, please run "npm install"
+- verdaccio를 사용하여 local에서 오픈한 npm server에서 npm install하여 사용. install했을시 webpack에서 node_modules excludes하는 부부분에서 enz-design을 includes하도록 변경 필요.
 
-## build
-- **npm test** (local development build) 
-
- this will run webpack-dev-server with hot loader (localhost:3000)
- 
-- **npm run prod** (production build)  
-
- this will build dist folder which includes bundle.js, vender.js, manifest.json, and index.html (and also source-map files)
-
-## Eslint
- you can see the configuration setting on package.json. *eslint rules* are based with airbnb and some of the custom is applied on package.json (ex - indent 4 space, etc)  
-
- The *prettier* is included in this bolierplate. If you want to use, set your local IDS setting to use autofix.
-
-ex) vscode setting.json file:
 ```
-{
-    "[javascript]": {
-        "editor.formatOnSave": false
-    },
-    "eslint.enable": true,
-    "editor.formatOnSave": true,
-    "eslint.autoFixOnSave": true,
-    "prettier.disableLanguage": ["js"]
-}
+ npm install enz-design --registry http://localhost:4873
 ```
-
-## env
- *env* folder contains environment variable properties, which will be used from webpack "DefinePlugin".
-
- If you want to separate variables depends on environments(such as api endpoint),
- 1. create "*.env.{{environment}}*" file from env folder.
- 2. define variables on each environment .env files
- 3. run "<u>webpack --env.ENVIRONMENT={{environment}} --config ./webpack/webpack.config.prod.js</u>"

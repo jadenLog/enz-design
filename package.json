@@ -1,10 +1,12 @@
 {
     "name": "enz-design",
-    "version": "0.1.0",
+    "version": "0.1.4",
     "description": "enjoying design system",
     "main": "index.js",
     "scripts": {
         "storybook": "start-storybook",
+        "open-npm-server": "verdaccio",
+        "broadcast": "npm publish --registry http://localhost:4873",
         "test": "webpack-dev-server --env.ENVIRONMENT=local --config ./webpack/webpack.config.js --watch",
         "prod": "webpack --env.ENVIRONMENT=prod --config ./webpack/webpack.config.prod.js"
     },
@@ -61,7 +63,8 @@
                 "error",
                 {
                     "devDependencies": [
-                        "**/*.stories.js"
+                        "**/*.stories.js",
+                        "./webpack/*.js"
                     ]
                 }
             ]
@@ -108,10 +111,8 @@
         "url-loader": "^2.2.0",
         "webpack": "^4.41.0",
         "webpack-bundle-analyzer": "^3.6.0",
-        "webpack-cleanup-plugin": "^0.5.1",
         "webpack-cli": "^3.3.9",
         "webpack-dev-server": "^3.8.2",
-        "webpack-manifest-plugin": "^2.2.0",
         "webpack-merge": "^4.2.2"
     }
 }
